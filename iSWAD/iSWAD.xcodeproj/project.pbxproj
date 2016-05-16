@@ -199,6 +199,7 @@
 				TargetAttributes = {
 					62BA86751CEA579E00538FE0 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = H6LFGR93JB;
 					};
 					62BA868B1CEA579F00538FE0 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -409,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = iSWAD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ugr.iSWAD;
@@ -420,6 +422,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = iSWAD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ugr.iSWAD;
@@ -492,6 +495,7 @@
 				62BA86A21CEA579F00538FE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		62BA86A31CEA579F00538FE0 /* Build configuration list for PBXNativeTarget "iSWADTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +504,7 @@
 				62BA86A51CEA579F00538FE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		62BA86A61CEA579F00538FE0 /* Build configuration list for PBXNativeTarget "iSWADUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +513,7 @@
 				62BA86A81CEA579F00538FE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

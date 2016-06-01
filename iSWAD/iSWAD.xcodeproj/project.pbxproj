@@ -16,6 +16,10 @@
 		62BA86911CEA579F00538FE0 /* iSWADTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA86901CEA579F00538FE0 /* iSWADTests.swift */; };
 		62BA869C1CEA579F00538FE0 /* iSWADUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA869B1CEA579F00538FE0 /* iSWADUITests.swift */; };
 		62BA86AA1CEA584E00538FE0 /* SyedAbsarClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BA86A91CEA584E00538FE0 /* SyedAbsarClient.swift */; };
+		62E2DBF01CEC967D00A6885B /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E2DBEF1CEC967D00A6885B /* Student.swift */; };
+		62E2DBF21CECA2D500A6885B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 62E2DBF11CECA2D500A6885B /* Podfile */; };
+		62E348B51CF23624004BD63D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E348B41CF23624004BD63D /* Utils.swift */; };
+		FF1A5B3C1D776973E5EED816 /* Pods_iSWAD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A62EDA2F36E2FEAC7ED97D7E /* Pods_iSWAD.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08F6D23A4C7A825B79C31856 /* Pods-iSWAD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSWAD.release.xcconfig"; path = "iSWAD/Pods/Target Support Files/Pods-iSWAD/Pods-iSWAD.release.xcconfig"; sourceTree = "<group>"; };
 		62BA86761CEA579E00538FE0 /* iSWAD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSWAD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62BA86791CEA579E00538FE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62BA867B1CEA579E00538FE0 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +56,11 @@
 		62BA869B1CEA579F00538FE0 /* iSWADUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSWADUITests.swift; sourceTree = "<group>"; };
 		62BA869D1CEA579F00538FE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62BA86A91CEA584E00538FE0 /* SyedAbsarClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyedAbsarClient.swift; sourceTree = "<group>"; };
+		62E2DBEF1CEC967D00A6885B /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		62E2DBF11CECA2D500A6885B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		62E348B41CF23624004BD63D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		7B92A0B5735E663134D08702 /* Pods-iSWAD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSWAD.debug.xcconfig"; path = "iSWAD/Pods/Target Support Files/Pods-iSWAD/Pods-iSWAD.debug.xcconfig"; sourceTree = "<group>"; };
+		A62EDA2F36E2FEAC7ED97D7E /* Pods_iSWAD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSWAD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF1A5B3C1D776973E5EED816 /* Pods_iSWAD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +96,8 @@
 				62BA868F1CEA579F00538FE0 /* iSWADTests */,
 				62BA869A1CEA579F00538FE0 /* iSWADUITests */,
 				62BA86771CEA579E00538FE0 /* Products */,
+				E129BDC14038809565A3FD34 /* Pods */,
+				89BB8C0DE6781D8C90E1DF89 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,12 +116,15 @@
 			children = (
 				62BA86791CEA579E00538FE0 /* AppDelegate.swift */,
 				62BA867B1CEA579E00538FE0 /* MasterViewController.swift */,
+				62E2DBEF1CEC967D00A6885B /* Student.swift */,
 				62BA86A91CEA584E00538FE0 /* SyedAbsarClient.swift */,
 				62BA867D1CEA579E00538FE0 /* DetailViewController.swift */,
 				62BA867F1CEA579E00538FE0 /* Main.storyboard */,
 				62BA86821CEA579F00538FE0 /* Assets.xcassets */,
 				62BA86841CEA579F00538FE0 /* LaunchScreen.storyboard */,
 				62BA86871CEA579F00538FE0 /* Info.plist */,
+				62E2DBF11CECA2D500A6885B /* Podfile */,
+				62E348B41CF23624004BD63D /* Utils.swift */,
 			);
 			path = iSWAD;
 			sourceTree = "<group>";
@@ -131,6 +147,23 @@
 			path = iSWADUITests;
 			sourceTree = "<group>";
 		};
+		89BB8C0DE6781D8C90E1DF89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A62EDA2F36E2FEAC7ED97D7E /* Pods_iSWAD.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E129BDC14038809565A3FD34 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B92A0B5735E663134D08702 /* Pods-iSWAD.debug.xcconfig */,
+				08F6D23A4C7A825B79C31856 /* Pods-iSWAD.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62BA86A01CEA579F00538FE0 /* Build configuration list for PBXNativeTarget "iSWAD" */;
 			buildPhases = (
+				F18635D942B9154898D2A43B /* 📦 Check Pods Manifest.lock */,
 				62BA86721CEA579E00538FE0 /* Sources */,
 				62BA86731CEA579E00538FE0 /* Frameworks */,
 				62BA86741CEA579E00538FE0 /* Resources */,
+				1CFDBC23064E30C67943E018 /* 📦 Embed Pods Frameworks */,
+				9945EA62EBE5E7AE6DC1DD68 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,6 +274,7 @@
 			files = (
 				62BA86861CEA579F00538FE0 /* LaunchScreen.storyboard in Resources */,
 				62BA86831CEA579F00538FE0 /* Assets.xcassets in Resources */,
+				62E2DBF21CECA2D500A6885B /* Podfile in Resources */,
 				62BA86811CEA579E00538FE0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +295,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1CFDBC23064E30C67943E018 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/iSWAD/Pods/Target Support Files/Pods-iSWAD/Pods-iSWAD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9945EA62EBE5E7AE6DC1DD68 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/iSWAD/Pods/Target Support Files/Pods-iSWAD/Pods-iSWAD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F18635D942B9154898D2A43B /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		62BA86721CEA579E00538FE0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -266,7 +351,9 @@
 				62BA867E1CEA579E00538FE0 /* DetailViewController.swift in Sources */,
 				62BA86AA1CEA584E00538FE0 /* SyedAbsarClient.swift in Sources */,
 				62BA867C1CEA579E00538FE0 /* MasterViewController.swift in Sources */,
+				62E2DBF01CEC967D00A6885B /* Student.swift in Sources */,
 				62BA867A1CEA579E00538FE0 /* AppDelegate.swift in Sources */,
+				62E348B51CF23624004BD63D /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +495,7 @@
 		};
 		62BA86A11CEA579F00538FE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B92A0B5735E663134D08702 /* Pods-iSWAD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -420,6 +508,7 @@
 		};
 		62BA86A21CEA579F00538FE0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08F6D23A4C7A825B79C31856 /* Pods-iSWAD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

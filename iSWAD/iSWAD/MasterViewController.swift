@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CryptoSwift
 
 class MasterViewController: UITableViewController {
 
@@ -25,6 +26,7 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        loginToServer()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -48,7 +50,7 @@ class MasterViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let object = objects[indexPath.row] as! NSDate
+                let object = objects[indexPath.row] as! String
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
@@ -70,8 +72,8 @@ class MasterViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 
-        let object = objects[indexPath.row] as! NSDate
-        cell.textLabel!.text = object.description
+        let object = objects[indexPath.row] as! String
+        cell.textLabel!.text = object
         return cell
     }
 
@@ -88,6 +90,37 @@ class MasterViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
+    
+    func loginToServer() -> Bool {
+        let client = SyedAbsarClient()
+        let request = LoginByUserPasswordKey()
+        let user = Student()
+        user.userID = "26045090"
+        request.cpAppKey = "itorres"
+        request.cpUserID = "26045090"
+        var password = "jesusa11"
+        password = encryptPassword(password);
+        request.cpUserPassword = password
+        print("Start Login")
+        client.opLoginByUserPasswordKey(request) { (response: LoginByUserPasswordKeyOutput?, error: NSError?) in
+            let requestCourses = GetCourses()
+            requestCourses.cpWsKey = response!.cpWsKey!
+            print("Start get Courses")
+            client.opGetCourses(requestCourses){ (response2: GetCoursesOutput?, error) in
+                print(response2?.cpCoursesArray)
+                //print(response2?.xmlResponseString)
+            }
+            
+            self.title = " \(response!.cpUserFirstname!) \(response!.cpUserSurname1!) \(response!.cpUserSurname2!)"
+            
+            self.objects.insert(response!.cpUserSurname1!, atIndex: 0)
+            let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+            self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            
+        }
+        return true;
+    }
+    
 
 
 }

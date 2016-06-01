@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+
+project '../iSWAD.xcodeproj'
+
+use_frameworks!
+
+target 'iSWAD' do
+    pod 'SWXMLHash', '~> 2.3.0'
+    pod 'CryptoSwift'
+    pod 'SwiftKVC'
+end

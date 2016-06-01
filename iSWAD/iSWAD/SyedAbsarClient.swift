@@ -27,7 +27,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:createAccount><userNickname>%@</userNickname><userEmail>%@</userEmail><userPassword>%@</userPassword><appKey>%@</appKey></ns1:createAccount></SOAP-ENV:Body></SOAP-ENV:Envelope>",createAccount.cpUserNickname!,createAccount.cpUserEmail!,createAccount.cpUserPassword!,createAccount.cpAppKey!)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"CreateAccountOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? CreateAccountOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"CreateAccountOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? CreateAccountOutput,error) })
     }
     
     /**
@@ -38,11 +38,11 @@
      
      - returns: Void.
      */
-    public func opLoginByUserPasswordKey(loginByUserPasswordKey : LoginByUserPasswordKey , completionHandler: (LoginByUserPasswordKeyOutput?, NSError?) -> Void) {
+    public func opLoginByUserPasswordKey(loginByUserPasswordKey : LoginByUserPasswordKey , completionHandler: (LoginByUserPasswordKeyOutput?, NSError?, XMLIndexer?) -> Void) {
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:loginByUserPasswordKey><userID>%@</userID><userPassword>%@</userPassword><appKey>%@</appKey></ns1:loginByUserPasswordKey></SOAP-ENV:Body></SOAP-ENV:Envelope>",loginByUserPasswordKey.cpUserID!,loginByUserPasswordKey.cpUserPassword!,loginByUserPasswordKey.cpAppKey!)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"LoginByUserPasswordKeyOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? LoginByUserPasswordKeyOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"LoginByUserPasswordKeyOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? LoginByUserPasswordKeyOutput,error,xml) })
     }
     
     /**
@@ -57,7 +57,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:loginBySessionKey><sessionID>%@</sessionID><appKey>%@</appKey></ns1:loginBySessionKey></SOAP-ENV:Body></SOAP-ENV:Envelope>",loginBySessionKey.cpSessionID!,loginBySessionKey.cpAppKey!)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"LoginBySessionKeyOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? LoginBySessionKeyOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"LoginBySessionKeyOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? LoginBySessionKeyOutput,error) })
     }
     
     /**
@@ -72,7 +72,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:getNewPassword><userID>%@</userID><appKey>%@</appKey></ns1:getNewPassword></SOAP-ENV:Body></SOAP-ENV:Envelope>",getNewPassword.cpUserID!,getNewPassword.cpAppKey!)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetNewPasswordOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? GetNewPasswordOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetNewPasswordOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? GetNewPasswordOutput,error) })
     }
     
     /**
@@ -87,7 +87,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:getCourses><wsKey>%@</wsKey></ns1:getCourses></SOAP-ENV:Body></SOAP-ENV:Envelope>",getCourses.cpWsKey!)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetCoursesOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? GetCoursesOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetCoursesOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? GetCoursesOutput,error) })
     }
     
     /**
@@ -102,7 +102,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:getCourseInfo><wsKey>%@</wsKey><courseCode>0</courseCode><infoType>%@</infoType></ns1:getCourseInfo></SOAP-ENV:Body></SOAP-ENV:Envelope>",getCourseInfo.cpWsKey!,getCourseInfo.cpCourseCode,getCourseInfo.cpInfoType!)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetCourseInfoOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? GetCourseInfoOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetCourseInfoOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? GetCourseInfoOutput,error) })
     }
     
     /**
@@ -117,7 +117,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:getGroupTypes><wsKey>%@</wsKey><courseCode>0</courseCode></ns1:getGroupTypes></SOAP-ENV:Body></SOAP-ENV:Envelope>",getGroupTypes.cpWsKey!,getGroupTypes.cpCourseCode)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetGroupTypesOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? GetGroupTypesOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetGroupTypesOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? GetGroupTypesOutput,error) })
     }
     
     /**
@@ -132,7 +132,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:getGroups><wsKey>%@</wsKey><courseCode>0</courseCode></ns1:getGroups></SOAP-ENV:Body></SOAP-ENV:Envelope>",getGroups.cpWsKey!,getGroups.cpCourseCode)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetGroupsOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? GetGroupsOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetGroupsOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? GetGroupsOutput,error) })
     }
     
     /**
@@ -147,7 +147,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:sendMyGroups><wsKey>%@</wsKey><courseCode>0</courseCode><myGroups>%@</myGroups></ns1:sendMyGroups></SOAP-ENV:Body></SOAP-ENV:Envelope>",sendMyGroups.cpWsKey!,sendMyGroups.cpCourseCode,sendMyGroups.cpMyGroups!)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"SendMyGroupsOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? SendMyGroupsOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"SendMyGroupsOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? SendMyGroupsOutput,error) })
     }
     
     /**
@@ -162,7 +162,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:getDirectoryTree><wsKey>%@</wsKey><courseCode>0</courseCode><groupCode>0</groupCode><treeCode>0</treeCode></ns1:getDirectoryTree></SOAP-ENV:Body></SOAP-ENV:Envelope>",getDirectoryTree.cpWsKey!,getDirectoryTree.cpCourseCode,getDirectoryTree.cpGroupCode,getDirectoryTree.cpTreeCode)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetDirectoryTreeOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? GetDirectoryTreeOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetDirectoryTreeOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? GetDirectoryTreeOutput,error) })
     }
     
     /**
@@ -177,7 +177,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:getFile><wsKey>%@</wsKey><fileCode>0</fileCode></ns1:getFile></SOAP-ENV:Body></SOAP-ENV:Envelope>",getFile.cpWsKey!,getFile.cpFileCode)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetFileOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? GetFileOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetFileOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? GetFileOutput,error) })
     }
     
     /**
@@ -192,7 +192,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:getMarks><wsKey>%@</wsKey><fileCode>0</fileCode></ns1:getMarks></SOAP-ENV:Body></SOAP-ENV:Envelope>",getMarks.cpWsKey!,getMarks.cpFileCode)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetMarksOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? GetMarksOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetMarksOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? GetMarksOutput,error) })
     }
     
     /**
@@ -207,7 +207,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:getTestConfig><wsKey>%@</wsKey><courseCode>0</courseCode></ns1:getTestConfig></SOAP-ENV:Body></SOAP-ENV:Envelope>",getTestConfig.cpWsKey!,getTestConfig.cpCourseCode)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetTestConfigOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? GetTestConfigOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetTestConfigOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? GetTestConfigOutput,error) })
     }
     
     /**
@@ -222,7 +222,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:getTests><wsKey>%@</wsKey><courseCode>0</courseCode><beginTime>0</beginTime></ns1:getTests></SOAP-ENV:Body></SOAP-ENV:Envelope>",getTests.cpWsKey!,getTests.cpCourseCode,getTests.cpBeginTime!)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetTestsOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? GetTestsOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetTestsOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? GetTestsOutput,error) })
     }
     
     /**
@@ -237,7 +237,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:getTrivialQuestion><wsKey>%@</wsKey><degrees>%@</degrees><lowerScore>0</lowerScore><upperScore>0</upperScore></ns1:getTrivialQuestion></SOAP-ENV:Body></SOAP-ENV:Envelope>",getTrivialQuestion.cpWsKey!,getTrivialQuestion.cpDegrees!,getTrivialQuestion.cpLowerScore!,getTrivialQuestion.cpUpperScore!)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetTrivialQuestionOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? GetTrivialQuestionOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetTrivialQuestionOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? GetTrivialQuestionOutput,error) })
     }
     
     /**
@@ -252,7 +252,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:getUsers><wsKey>%@</wsKey><courseCode>0</courseCode><groupCode>0</groupCode><userRole>0</userRole></ns1:getUsers></SOAP-ENV:Body></SOAP-ENV:Envelope>",getUsers.cpWsKey!,getUsers.cpCourseCode,getUsers.cpGroupCode,getUsers.cpUserRole)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetUsersOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? GetUsersOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetUsersOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? GetUsersOutput,error) })
     }
     
     /**
@@ -267,7 +267,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:getAttendanceEvents><wsKey>%@</wsKey><courseCode>0</courseCode></ns1:getAttendanceEvents></SOAP-ENV:Body></SOAP-ENV:Envelope>",getAttendanceEvents.cpWsKey!,getAttendanceEvents.cpCourseCode)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetAttendanceEventsOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? GetAttendanceEventsOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetAttendanceEventsOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? GetAttendanceEventsOutput,error) })
     }
     
     /**
@@ -292,7 +292,7 @@
                                  sendAttendanceEvent.cpText!,
                                  sendAttendanceEvent.cpGroups!)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"SendAttendanceEventOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? SendAttendanceEventOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"SendAttendanceEventOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? SendAttendanceEventOutput,error) })
     }
     
     /**
@@ -307,7 +307,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:getAttendanceUsers><wsKey>%@</wsKey><attendanceEventCode>0</attendanceEventCode></ns1:getAttendanceUsers></SOAP-ENV:Body></SOAP-ENV:Envelope>",getAttendanceUsers.cpWsKey!,getAttendanceUsers.cpAttendanceEventCode)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetAttendanceUsersOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? GetAttendanceUsersOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetAttendanceUsersOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? GetAttendanceUsersOutput,error) })
     }
     
     /**
@@ -322,7 +322,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:sendAttendanceUsers><wsKey>%@</wsKey><attendanceEventCode>0</attendanceEventCode><users>%@</users><setOthersAsAbsent>0</setOthersAsAbsent></ns1:sendAttendanceUsers></SOAP-ENV:Body></SOAP-ENV:Envelope>",sendAttendanceUsers.cpWsKey!,sendAttendanceUsers.cpAttendanceEventCode,sendAttendanceUsers.cpUsers!,sendAttendanceUsers.cpSetOthersAsAbsent)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"SendAttendanceUsersOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? SendAttendanceUsersOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"SendAttendanceUsersOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? SendAttendanceUsersOutput,error) })
     }
     
     /**
@@ -337,7 +337,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:getNotifications><wsKey>%@</wsKey><beginTime>0</beginTime></ns1:getNotifications></SOAP-ENV:Body></SOAP-ENV:Envelope>",getNotifications.cpWsKey!,getNotifications.cpBeginTime!)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetNotificationsOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? GetNotificationsOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"GetNotificationsOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? GetNotificationsOutput,error) })
     }
     
     /**
@@ -352,7 +352,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:markNotificationsAsRead><wsKey>%@</wsKey><notifications>%@</notifications></ns1:markNotificationsAsRead></SOAP-ENV:Body></SOAP-ENV:Envelope>",markNotificationsAsRead.cpWsKey!,markNotificationsAsRead.cpNotifications!)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"MarkNotificationsAsReadOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? MarkNotificationsAsReadOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"MarkNotificationsAsReadOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? MarkNotificationsAsReadOutput,error) })
     }
     
     /**
@@ -367,7 +367,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:sendNotice><wsKey>%@</wsKey><courseCode>0</courseCode><body>%@</body></ns1:sendNotice></SOAP-ENV:Body></SOAP-ENV:Envelope>",sendNotice.cpWsKey!,sendNotice.cpCourseCode,sendNotice.cpBody!)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"SendNoticeOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? SendNoticeOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"SendNoticeOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? SendNoticeOutput,error) })
     }
     
     /**
@@ -382,7 +382,7 @@
         
         let soapMessage = String(format:"<?xml version=\"1.0\" encoding=\"UTF-8\"?><SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:swad\"><SOAP-ENV:Body><ns1:sendMessage><wsKey>%@</wsKey><messageCode>0</messageCode><to>%@</to><subject>%@</subject><body>%@</body></ns1:sendMessage></SOAP-ENV:Body></SOAP-ENV:Envelope>",sendMessage.cpWsKey!,sendMessage.cpMessageCode,sendMessage.cpTo!,sendMessage.cpSubject!,sendMessage.cpBody!)
         
-        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"SendMessageOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError? )->Void in completionHandler(syedabsarObj  as? SendMessageOutput,error) })
+        self.makeSoapConnection("https://swad.ugr.es/", soapAction: "", soapMessage: soapMessage, soapVersion: "1", className:"SendMessageOutput", completionHandler: { (syedabsarObj:SyedAbsarObjectBase?, error: NSError?, xml:XMLIndexer? )->Void in completionHandler(syedabsarObj  as? SendMessageOutput,error) })
     }
     
     
@@ -398,7 +398,7 @@
      - completionHandler: Handler.
      - returns: Void.
      */
-    private func makeSoapConnection(soapLocation: String, soapAction: String, soapMessage: String,  soapVersion: String, className: String, completionHandler: (SyedAbsarObjectBase?, NSError?) -> Void) {
+    private func makeSoapConnection(soapLocation: String, soapAction: String, soapMessage: String,  soapVersion: String, className: String, completionHandler: (SyedAbsarObjectBase?, NSError?, XMLIndexer?) -> Void) {
         
         let request = NSMutableURLRequest(URL: NSURL(string: soapLocation)!)
         let msgLength  = String(soapMessage.characters.count)
@@ -453,6 +453,7 @@
             }
             let body =  xml["Envelope"]["Body"]
             
+            
             if (error == nil) {
                 for key in obj.cpKeys()  {
                     
@@ -460,16 +461,16 @@
                     let val = body[coreElementKey][key2].element?.text
                     print(key)
                     print(body[coreElementKey][key2])
-                    print(inst.valueForKey("cp"+key)?.principalClass);
                     if(body[coreElementKey][key2]["item"].element != nil) {
                         print("Habemus array")
-                        print(body[coreElementKey][key2]["item"])
+                        print(body[coreElementKey][key2]["item"]["courseCode"])
                     }
-                    inst.setValue(val, forKey: "cp"+key)
+                    inst.setValue(val, forKeyPath: "cp"+key)
+                    print(inst.valueForKeyPath("cp"+key).dynamicType);
                 }
             }
             
-            completionHandler(inst, error)
+            completionHandler(inst, error, xml)
             
             
         }
@@ -511,9 +512,11 @@
  @objc(CoursesArray)
  public class CoursesArray : SyedAbsarObjectBase {
     
-    
+    required public init() {
+        cpItem = []
+    }
     /// Item
-    var cpItem: String?
+    var cpItem: [Course]
     
     override static func cpKeys() -> Array<String> {
         return ["Item"]
@@ -553,9 +556,12 @@
  @objc(GroupTypesArray)
  public class GroupTypesArray : SyedAbsarObjectBase {
     
+    required public init() {
+        cpItem = []
+    }
     
     /// Item
-    var cpItem: String?
+    var cpItem: [GroupType]
     
     override static func cpKeys() -> Array<String> {
         return ["Item"]
@@ -606,10 +612,12 @@
   */
  @objc(GroupsArray)
  public class GroupsArray : SyedAbsarObjectBase {
-    
+    required public init() {
+        cpItem = []
+    }
     
     /// Item
-    var cpItem: String?
+    var cpItem: [Group]
     
     override static func cpKeys() -> Array<String> {
         return ["Item"]
@@ -672,10 +680,12 @@
   */
  @objc(NotificationsArray)
  public class NotificationsArray : SyedAbsarObjectBase {
-    
+    required public init() {
+        cpItem = []
+    }
     
     /// Item
-    var cpItem: String?
+    var cpItem: [Notification]
     
     override static func cpKeys() -> Array<String> {
         return ["Item"]
@@ -705,10 +715,12 @@
   */
  @objc(TagsArray)
  public class TagsArray : SyedAbsarObjectBase {
-    
+    required public init() {
+        cpItem = []
+    }
     
     /// Item
-    var cpItem: String?
+    var cpItem: [Tag]
     
     override static func cpKeys() -> Array<String> {
         return ["Item"]

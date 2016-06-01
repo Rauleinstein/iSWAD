@@ -8,6 +8,7 @@
 
 import UIKit
 import CryptoSwift
+import SWXMLHash
 
 class MasterViewController: UITableViewController {
 
@@ -102,9 +103,14 @@ class MasterViewController: UITableViewController {
         password = encryptPassword(password);
         request.cpUserPassword = password
         print("Start Login")
-        client.opLoginByUserPasswordKey(request) { (response: LoginByUserPasswordKeyOutput?, error: NSError?) in
+        client.opLoginByUserPasswordKey(request) { (response: LoginByUserPasswordKeyOutput?, error: NSError?, xml: XMLIndexer?) in //FUNCIONA!!! TODO: CAMBIAR TODAS LAS FUNCIONES 
+            print("XML = ")
+            print(xml!["Envelope"]["Body"]["loginByUserPasswordKeyOutput"]["wsKey"].element?.text!);
+            let loginData = xml!["Envelope"]["Body"]["loginByUserPasswordKeyOutput"];
+            
             let requestCourses = GetCourses()
-            requestCourses.cpWsKey = response!.cpWsKey!
+            requestCourses.cpWsKey = loginData["wsKey"].element?.text;
+            print(requestCourses.cpWsKey)
             print("Start get Courses")
             client.opGetCourses(requestCourses){ (response2: GetCoursesOutput?, error) in
                 print(response2?.cpCoursesArray)

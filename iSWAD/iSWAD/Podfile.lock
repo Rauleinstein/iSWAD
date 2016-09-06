@@ -1,0 +1,21 @@
+PODS:
+  - CryptoSwift (0.5.2)
+  - FontAwesome.swift (0.8.0)
+  - ReachabilitySwift (2.3.3)
+  - SWXMLHash (2.3.2)
+
+DEPENDENCIES:
+  - CryptoSwift
+  - FontAwesome.swift
+  - ReachabilitySwift
+  - SWXMLHash (~> 2.3.0)
+
+SPEC CHECKSUMS:
+  CryptoSwift: c1ef79f901b86099a6fe8b3c7524cf9f3f3c8c40
+  FontAwesome.swift: f8c6cc5c42cbe93bdc04371363bc7b371fb3d3a1
+  ReachabilitySwift: e0f6b6f280effb47731acfaaa2d5ffe223703793
+  SWXMLHash: 2f8c49af765718ad56020c4f875ec3ff22612f06
+
+PODFILE CHECKSUM: 978a83bc31881a20d6bf5f4e516d38df714feba6
+
+COCOAPODS: 1.0.0.rc.1
